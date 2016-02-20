@@ -13,7 +13,7 @@ from matplotlib import pyplot as plt
 
 def transformation_1(p):
     x = p[0]
-    y = p[0]
+    y = p[1]
     x1 = 0.85*x + 0.04*y
     y1 = -0.04*x + 0.85*y + 1.6
     return x1, y1
@@ -85,4 +85,5 @@ if __name__ == '__main__':
     # Plot the points
     plt.plot(x, y, 'o')
     plt.title('Fern with {0} points'.format(n))
+    plt.savefig('barnsley_fern.png')
     plt.show()
