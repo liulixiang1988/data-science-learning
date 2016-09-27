@@ -10,6 +10,7 @@ def normal_approximation_to_binomial(n, p):
     sigma = math.sqrt(p * (1 - p) * n)
     return mu, sigma
 
+# -------------数值位于某些区间的概率-------------
 # 一个变量低于阈值以下的概率
 normal_probability_below = normal_cdf
 
@@ -27,3 +28,6 @@ def normal_probability_between(lo, hi, mu=0, sigma=1):
 def normal_probability_outside(lo, hi, mu=0, sigma=1):
     """阈值在两个值之外的概率"""
     return 1 - normal_probability_between(lo, hi, mu, sigma)
+
+
+# --------------根据概率求对应的区间--------------
